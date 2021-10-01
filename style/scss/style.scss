@@ -1,0 +1,107 @@
+@import "reset";
+@import "base";
+@import "card";
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: $c__background;
+
+}
+
+
+.main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.profileCard {
+
+    height: 175px;
+    width: 175px;
+    background-color: red;
+    position: fixed;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.card__social {
+    display: none;
+    position: fixed;
+
+    width: rem(248);
+    height: 55px;
+    background-color: $c__card-social;
+
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0px 15px 25px -4px rgba(30, 30, 60, 0.25);
+    border-radius: 10px;
+
+    
+
+    @media (min-width: 800px) {
+
+            
+
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid $c__card-background;
+            
+    
+            position: relative;
+            top: 32.5px;
+            right: calc(50% - 8px);
+        }
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid $c__card-social;
+            
+    
+            position: relative;
+            top: 33px;
+            
+            left: calc(50% + -6px);
+        }
+
+    }
+
+    
+    /* Path 2 */
+
+
+
+
+}
+
+.social__icon {
+
+    transition: 1s;
+
+    &:hover {
+        mix-blend-mode: overlay;
+
+    }
+}
+
+.social__text {
+    letter-spacing: 5px;
+    color: #9DAEC2;
+    line-height: rem(20);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: $fs__s;
+    margin-right: 5px;
+
+
+}

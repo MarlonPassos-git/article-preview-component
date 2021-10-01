@@ -1,0 +1,169 @@
+.card {
+
+    display: flex;
+    flex-direction: column;
+
+
+
+    background: $c__card-background;
+
+    border-radius: 10px;
+
+    max-width: 408.75px;
+    width: 87.2vw;
+
+    overflow: hidden;
+
+
+
+    @media (min-width: 800px) {
+        flex-direction: row;
+        max-width: 730px;
+    }
+
+    &__img {
+        max-height: 250px;
+        min-height: 150px;
+        height: 53.3333vw;
+        width: 100%;
+
+        object-fit: cover;
+        object-position: 0 -16px;
+
+        @media (min-width: 800px) {
+
+            width: 285px;
+            max-height: 280px;
+            object-position: 0;
+        }
+    }
+
+
+
+    &__content {
+        display: grid;
+        grid-template:
+            "title "
+            "paragraph "
+            "data"
+        ;
+
+        padding: rem(36) rem(32) rem(20);
+
+        @media (min-width: 800px) {
+
+            padding: rem(32) rem(42);
+
+            max-height: 280px;
+        }
+
+    }
+
+    &__data {
+
+        grid-area: data;
+        display: grid;
+        grid-template:
+        "profile-picture profile-name share"
+        "profile-picture send-date share"
+        / 56px 1fr
+        ;
+        
+    }
+
+    &__title {
+        grid-area: title;
+
+        font-size: $fs__m;
+        font-weight: 700;
+        letter-spacing: rem(0.2);
+        line-height: rem(24);
+        color: $c__card-title;
+
+        @media (min-width: 800px) {
+            font-size: $fs__l;
+            line-height: rem(28);
+        }
+
+
+    }
+
+    &__paragraph {
+        grid-area: paragraph;
+
+        margin: rem(12) 0 rem(32);
+
+        font-size: $fs__s;
+        font-weight: 500;
+        letter-spacing: rem(0.12);
+        line-height: rem(20);
+        color: $c__card-paragraph;
+
+        @media (min-width: 800px) {
+            margin: rem(12) 0 rem(20);
+        }
+
+        justify-self: start;
+
+    }
+
+    &__profile-picture {
+        grid-area: profile-picture;
+
+        width: 40px;
+        height: 40px;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+
+    }
+
+    &__profile-name {
+        grid-area: profile-name;
+
+        font-size: $fs__s;
+        font-weight: 700;
+        letter-spacing: rem(0.12);
+        line-height: rem(20);
+        color: $c__card-title;
+        cursor: pointer;
+    }
+
+    &__send-date {
+        grid-area: send-date;
+
+        font-weight: 500;
+        letter-spacing: rem(0.12);
+        line-height: rem(20);
+        font-size: $fs__s;
+        color: $c__card-date;
+    }
+
+    &__share {
+        grid-area: share;
+        align-self: center;
+        appearance: none;
+
+        width: 32px;
+        height: 32px;
+
+        border-radius: 50%;
+        border: none;
+        background: $c__card-button-background;
+
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: 0.5s;
+        }
+
+        &:active {
+            background: $c__card-background;
+            border: .5px solid $c__card-button-background;
+        }
+
+    }
+
+}

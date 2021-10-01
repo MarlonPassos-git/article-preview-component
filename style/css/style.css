@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 10px;
+  max-width: 408.75px;
+  width: 87.2vw;
+  overflow: hidden;
+}
+@media (min-width: 800px) {
+  .card {
+    flex-direction: row;
+    max-width: 730px;
+  }
+}
+.card__img {
+  max-height: 250px;
+  min-height: 150px;
+  height: 53.3333vw;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 -16px;
+}
+@media (min-width: 800px) {
+  .card__img {
+    width: 285px;
+    max-height: 280px;
+    object-position: 0;
+  }
+}
+.card__content {
+  display: grid;
+  grid-template: "title " "paragraph " "data";
+  padding: 2.25rem 2rem 1.25rem;
+}
+@media (min-width: 800px) {
+  .card__content {
+    padding: 2rem 2.625rem;
+    max-height: 280px;
+  }
+}
+.card__data {
+  grid-area: data;
+  display: grid;
+  grid-template: "profile-picture profile-name share" "profile-picture send-date share"/56px 1fr;
+}
+.card__title {
+  grid-area: title;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.0125rem;
+  line-height: 1.5rem;
+  color: #48556A;
+}
+@media (min-width: 800px) {
+  .card__title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+.card__paragraph {
+  grid-area: paragraph;
+  margin: 0.75rem 0 2rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.0075rem;
+  line-height: 1.25rem;
+  color: #6E8098;
+  justify-self: start;
+}
+@media (min-width: 800px) {
+  .card__paragraph {
+    margin: 0.75rem 0 1.25rem;
+  }
+}
+.card__profile-picture {
+  grid-area: profile-picture;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card__profile-name {
+  grid-area: profile-name;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.0075rem;
+  line-height: 1.25rem;
+  color: #48556A;
+  cursor: pointer;
+}
+.card__send-date {
+  grid-area: send-date;
+  font-weight: 500;
+  letter-spacing: 0.0075rem;
+  line-height: 1.25rem;
+  font-size: 0.8125rem;
+  color: #9DAEC2;
+}
+.card__share {
+  grid-area: share;
+  align-self: center;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #ECF2F8;
+  cursor: pointer;
+}
+.card__share:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+.card__share:active {
+  background: #FFFFFF;
+  border: 0.5px solid #ECF2F8;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #ECF2F8;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.profileCard {
+  height: 175px;
+  width: 175px;
+  background-color: red;
+  position: fixed;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.card__social {
+  display: none;
+  position: fixed;
+  width: 15.5rem;
+  height: 55px;
+  background-color: #48556A;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0px 15px 25px -4px rgba(30, 30, 60, 0.25);
+  border-radius: 10px;
+  /* Path 2 */
+}
+@media (min-width: 800px) {
+  .card__social:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FFFFFF;
+    position: relative;
+    top: 32.5px;
+    right: calc(50% - 8px);
+  }
+  .card__social:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #48556A;
+    position: relative;
+    top: 33px;
+    left: calc(50% + -6px);
+  }
+}
+
+.social__icon {
+  transition: 1s;
+}
+.social__icon:hover {
+  mix-blend-mode: overlay;
+}
+
+.social__text {
+  letter-spacing: 5px;
+  color: #9DAEC2;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  margin-right: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

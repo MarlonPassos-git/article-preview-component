@@ -1,0 +1,22 @@
+// Functions
+
+@function rem($pixels, $contexto: 16) {
+    @return ($pixels / $contexto) * 1rem;
+}
+
+// Fonts
+
+$fs__l: rem(20);
+$fs__m: rem(16);
+$fs__s: rem(13);
+
+
+// Colors
+
+$c__background: #ECF2F8;
+$c__card-background: #FFFFFF;
+$c__card-title: #48556A;
+$c__card-paragraph: #6E8098;
+$c__card-date:#9DAEC2;
+$c__card-button-background: #ECF2F8;
+$c__card-social: #48556A;
