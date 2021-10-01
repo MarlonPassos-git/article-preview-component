@@ -8,8 +8,8 @@
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://meet-landing-page-bice.vercel.app/](https://meet-landing-page-bice.vercel.app/)
+- Solution URL: [https://www.frontendmentor.io/solutions/aligned-however-jerryrig-with-javascript-58oFf4ME8](https://www.frontendmentor.io/solutions/aligned-however-jerryrig-with-javascript-58oFf4ME8)
+- Live Site URL: [https://article-preview-component-rosy-gamma.vercel.app/](https://article-preview-component-rosy-gamma.vercel.app/)
 
 
 ## Built with
